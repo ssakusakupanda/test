@@ -20,6 +20,10 @@ dai = re.compile(ur'代表表記:([^/]+)/')
 
 MODEL_PATH = "./yacis_full_juman.model"
 
+
+def similarity_words(model,str1,str2):
+    return model.similarity(str1, str2)
+
 class WordNotInVocabulary(Exception):
     """語彙に語が存在しない例外"""
     def __init__(self, word):
@@ -112,6 +116,11 @@ def main():
     try:
         model = prepare_model(fname_model)
         print("qで終了")
+        while 1:
+            str1 = raw_input("str1 ").decode(ENC)
+            str2 = raw_input("str2 ").decode(ENC)
+            print(similarity_words(model,str1,str2))
+
         while 1:
             ipt0 = raw_input("ameblo2> ").decode(ENC)
             if not ipt0:
