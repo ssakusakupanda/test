@@ -18,7 +18,7 @@ import subprocess
 ENC = "utf-8"
 dai = re.compile(ur'代表表記:([^/]+)/')
 
-MODEL_PATH = "/FORALL/w2vcorpus_from_yacis/full/yacis_full_juman.model"
+MODEL_PATH = "./yacis_full_juman.model"
 
 class WordNotInVocabulary(Exception):
     """語彙に語が存在しない例外"""
