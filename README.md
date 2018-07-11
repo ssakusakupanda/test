@@ -2,3 +2,4 @@
 warewarehatikyu
 ls
 gso
+fishi
